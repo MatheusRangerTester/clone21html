@@ -1,0 +1,185 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111;
+}
+
+
+/* ------------------------------
+   NAVBAR
+------------------------------ */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 80px;
+
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1000;
+
+  background-color: transparent;
+
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+
+  transition: color 0.5s ease;
+}
+
+.logo {
+  font-size: 16px !important;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+
+/* ------------------------------
+   SECTIONS
+------------------------------ */
+
+.section {
+  min-height: 100vh;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 120px 8%;
+
+  overflow: hidden;
+}
+
+
+/* ------------------------------
+   SECTION COLORS
+------------------------------ */
+
+.home {
+  background: #111111;
+  color: white;
+}
+
+.about {
+  background: #d9c7a8;
+  color: #111111;
+}
+
+.work {
+  background: #8b2020;
+  color: white;
+}
+
+.contact {
+  background: #e5e1d8;
+  color: #111111;
+}
+
+
+/* ------------------------------
+   CONTENT
+------------------------------ */
+
+.section-content {
+  width: 100%;
+  max-width: 1400px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: bold;
+
+  letter-spacing: 0.2em;
+
+  margin-bottom: 30px;
+}
+
+h1,
+h2 {
+  font-size: clamp(5rem, 12vw, 13rem);
+
+  line-height: 0.82;
+
+  letter-spacing: -0.06em;
+
+  text-transform: uppercase;
+}
+
+.description {
+  max-width: 500px;
+
+  margin-top: 50px;
+
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.scroll-text {
+  margin-top: 70px;
+
+  font-size: 11px;
+
+  letter-spacing: 0.2em;
+}
+
+
+/* ------------------------------
+   MOBILE
+------------------------------ */
+
+@media (max-width: 700px) {
+
+  #navbar {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  #navbar a {
+    font-size: 9px;
+  }
+
+  .section {
+    padding: 100px 25px;
+  }
+
+  h1,
+  h2 {
+    font-size: clamp(4rem, 18vw, 8rem);
+  }
+
+}
